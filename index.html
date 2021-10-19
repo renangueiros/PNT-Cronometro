@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cronômetro</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function Cronometro() {
+            return (
+                <div className="cronometro">
+                    <header>
+                        <h1>Cronômetro</h1>
+                    </header>
+                    <main>
+                        <div className="decoracao-cronometro">
+                            <div className="container-cronometro">
+                                <span className="minutos">0</span>
+                                <span className="segundos">00</span>
+                            </div>
+                        </div>
+                    </main>
+                    <footer>
+                        <div className="container-rodape">
+                            <button className="botao">Zerar</button>
+                        </div>
+                        <button className="botao-redondo">
+                            <i className="material-icons">play_arrow</i>
+                        </button>
+                        <div></div>
+                    </footer>
+                </div>
+            )
+        }
+
+        ReactDOM.render(
+            <Cronometro />,
+            document.querySelector('#root')
+        )
+    </script>
+</body>
+
+</html>
